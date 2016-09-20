@@ -13,8 +13,6 @@ server {
         set $http_x_forwarded_proto  $scheme;
     }
     ## Application specific logs
-    ## access_log /var/log/nginx/plop-access.log timing;
-    ## error_log /var/log/nginx/plop-error.log;
     rewrite ^/$ /webapp/ redirect;
     rewrite ^//?(/webapp)?$ /webapp/ redirect;
     rewrite ^/(v1|v2)/(.*) /api/docker/$repo/$1/$2;

@@ -1,0 +1,1 @@
+# artifactory-nginx-config

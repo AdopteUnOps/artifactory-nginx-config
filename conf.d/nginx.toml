@@ -3,5 +3,6 @@ src="nginx.tmpl"
 dest="/etc/nginx/conf.d/artifactory.conf"
 keys= [
   "/self/service/metadata/public-port",
+  "/self/service/metadata/public-ssl-port",
   "/self/service/metadata/public-dns"
 ]

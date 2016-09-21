@@ -5,7 +5,9 @@ ssl_session_cache shared:SSL:1m;
 ssl_prefer_server_ciphers   on;
 ## server configuration
 server {
-    listen {{getv "/self/service/metadata/public-port"}} ssl;
+    listen {{getv "/self/service/metadata/public-port"}};
+    listen {{getv "/self/service/metadata/public-ssl-port"}} ssl;
+
 
     server_name ~(?<repo>.+)\.{{getv "/self/service/metadata/public-dns"}} {{getv "/self/service/metadata/public-dns"}};
 
